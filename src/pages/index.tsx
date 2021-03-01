@@ -24,7 +24,7 @@ export default function Home(props: HomeProps) {
     >
       <div className={styles.container}>
         <Head>
-          <title>Início | Shake.it</title>
+          <title>Início | Pomo-Desk</title>
         </Head>
 
         <ExperienceBar />
