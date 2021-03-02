@@ -13,7 +13,7 @@
     --title: #2e384d;
     --red: #e83f5b;
     --green: #4cd62b;
-    --blue: #415AB4;
+    --blue: #2252fd;
     --blue-dark: #00388C;
     --blue-twitter: #2aa9e0;
 }
@@ -37,6 +37,11 @@ body {
 
 body, input, textarea, button {
     font: 400 1rem "Inter", sans-serif;
+}
+
+input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 1px;
 }
 
 button {
