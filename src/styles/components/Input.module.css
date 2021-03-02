@@ -1,0 +1,42 @@
+.inputContainer {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.inputContainer input[type="text"] {
+  background: linear-gradient(90deg, #4953B8 0%, rgba(73, 83, 184, 0.2) 100%);
+  width: 21.25rem;
+  height: 4rem;
+  border-radius: 5px 0px 0px 5px;
+  font-size: 1.5rem;
+  color: var(--text-highlight);
+  border: none;
+}
+
+.inputContainer input[type="submit"] {
+  color: var(--white);
+  background: var(--blue);
+  height: 4rem;
+  width: 4.5rem;
+  border-radius: 0px 5px 5px 0px;
+  transition: background-color 0.2s;
+  border: none;
+}
+
+@media screen and (max-width: 720px) {
+  .inputContainer input[type=text] {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 5px 5px 0px 0px;
+  }
+  .inputContainer input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0px 0px 5px 5px;
+  }
+}
+
+.inputContainer input[type="submit"]:hover {
+  background: var(--green);
+}
