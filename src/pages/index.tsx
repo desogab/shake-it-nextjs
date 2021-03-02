@@ -1,60 +1,32 @@
-import Head from 'next/head';
-import { GetServerSideProps } from 'next';
-import { CompletedChallenges } from "../components/CompletedChallenges";
-import { Countdown } from "../components/Countdown";
-import { ExperienceBar } from "../components/ExperienceBar";
-import { Profile } from '../components/Profile';
-import styles from '../styles/pages/Home.module.css'
-import { ChallengeBox } from "../components/ChallengeBox";
-import { CountdownProvider } from '../contexts/CountdownContext';
-import { ChallengesProvider } from '../contexts/ChallengesContext';
+import styles from '../styles/pages/Login.module.css';
+import Image from 'next/image';
+import Input from '../components/Input';
 
-interface HomeProps {
-  level: number;
-  currentExperience: number;
-  challengesCompleted: number;
-}
-
-export default function Home(props: HomeProps) {
+export default function Login() {
   return (
-    <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesCompleted={props.challengesCompleted}
-    >
-      <div className={styles.container}>
-        <Head>
-          <title>Início | Pomo-Desk</title>
-        </Head>
-
-        <ExperienceBar />
-
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
-      </div>
-    </ChallengesProvider>
+    <div className={styles.container}>
+      <section>
+        <div className={styles.logo}>
+          <Image
+            src="/logo.png"
+            layout="responsive"
+            width={3240}
+            height={3240}
+          />
+        </div>
+        <div>
+          <Image
+            src="/logo-name.png"
+            layout="responsive"
+            width={1500}
+            height={450}
+          />
+          <p>
+            Bem-Vindo(a)!
+          </p>
+          <Input />
+        </div>
+      </section>
+    </div>
   )
-}
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  //chamada api
-  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
-
-  return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted)
-    }
-  }
 }
