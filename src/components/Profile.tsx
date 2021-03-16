@@ -7,9 +7,10 @@ export function Profile() {
 
   return (
     <div className={styles.profileContainer}>
-      <img src="https://github.com/desogab.png" alt="Desogab" />
+      <img src="android-chrome-192x192.png" alt="Avatar" />
       <div>
-        <strong>Gabriel de Souza</strong>
+        <strong>{'Anônimo'}</strong>
+
         <p>
           <img src="icons/level.svg" alt="Level" />
           Level {level}

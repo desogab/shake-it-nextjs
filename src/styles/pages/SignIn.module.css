@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .container section {

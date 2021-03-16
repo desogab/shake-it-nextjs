@@ -1,6 +1,6 @@
-import styles from '../styles/pages/Login.module.css';
+import styles from '../styles/pages/SignIn.module.css';
 import Image from 'next/image';
-import Input from '../components/Input';
+import SignIn from '../components/SignIn';
 
 export default function Login() {
   return (
@@ -24,7 +24,7 @@ export default function Login() {
           <p>
             Bem-Vindo(a)!
           </p>
-          <Input />
+          <SignIn />
         </div>
       </section>
     </div>

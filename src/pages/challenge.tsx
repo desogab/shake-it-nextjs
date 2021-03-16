@@ -9,6 +9,7 @@ import { ChallengeBox } from "../components/ChallengeBox";
 import { CountdownProvider } from '../contexts/CountdownContext';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
 
+
 interface HomeProps {
   level: number;
   currentExperience: number;
